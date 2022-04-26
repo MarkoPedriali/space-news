@@ -17,12 +17,11 @@ function HomePosts(){
 
 
     return(
-        <section id="home-posts">
-            <h1>Space News</h1>
+        <section id="section-posts">
 
             {posts.map(post => (
 
-                <article className="home-post">
+                <article className="card-post">
                     <img src={post.imageUrl} alt={post.title} />
 
                     <div className="post-infos">

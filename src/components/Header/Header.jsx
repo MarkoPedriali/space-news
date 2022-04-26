@@ -1,10 +1,11 @@
 import './styles.css';
+import logo from './logo.png'; 
 
 function Header(){
     return(
         <header id="header">
-            <nav>
-                <img src="" alt="space-news logo" />
+            <nav className='nav-bar'>
+                <img src={logo} alt="space-news logo" />
 
                 <ul className="nav-list">
                     <li>
