@@ -22,8 +22,9 @@ function HomePosts(){
             {posts.map(post => (
 
                 <article className="card-post">
-                    <img src={post.imageUrl} alt={post.title} />
-
+                    <div className='imgCard'>
+                        <img src={post.imageUrl} alt={post.title} />
+                    </div>
                     <div className="post-infos">
                         <h2>{post.title}</h2>
                         <spam>{post.newsSite}</spam>
