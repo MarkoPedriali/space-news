@@ -27,7 +27,7 @@ function HomePosts(){
                     </div>
                     <div className="post-infos">
                         <h2>{post.title}</h2>
-                        <spam>{post.newsSite}</spam>
+                        <spam className='linkRefer'>{post.newsSite}</spam>
                         <p>{post.summary}</p>
                     </div>
                 </article>

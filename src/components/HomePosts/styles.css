@@ -1,12 +1,14 @@
 #section-posts{
-    width: 90%;
+    margin: auto;
+    max-width: 80%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: flex-start;
 }
 
 .card-post{
+    justify-self: center;
     margin-top: 0.5%;
     width: 33%;
     display: flex;
@@ -37,4 +39,8 @@
     /* border-style:  none solid;
     border-width: 1px;
     border-color: rgb(195, 190, 190); */
+}
+
+.linkRefer{
+    color:rgb(53, 8, 95);
 }

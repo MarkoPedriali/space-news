@@ -4,7 +4,7 @@ import HomePosts from './components/HomePosts';
 
 function App() {
   return (
-    <div id="wrapper">
+    <div className='wrapper'>
       <Header/>
       <HomePosts/>
     </div>
