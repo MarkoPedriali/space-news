@@ -41,6 +41,15 @@
     border-color: rgb(195, 190, 190); */
 }
 
-.linkRefer{
-    color:rgb(53, 8, 95);
+.post-title{
+    margin: 0 0 0.5rem;
+}
+
+.link-refer{
+    font-family: 'Bungee', cursive;
+    color:rgb(94, 90, 98);
+}
+
+.post-sumary{
+    margin: 0.5rem 0 0;
 }

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import React from 'react';
 import './styles.css';
 
+
 function HomePosts(){
  
     const [posts, setPosts] = useState([])
@@ -26,9 +27,9 @@ function HomePosts(){
                         <img src={post.imageUrl} alt={post.title} />
                     </div>
                     <div className="post-infos">
-                        <h2>{post.title}</h2>
-                        <spam className='linkRefer'>{post.newsSite}</spam>
-                        <p>{post.summary}</p>
+                        <h2 className='post-title'>{post.title}</h2>
+                        <spam className='link-refer'>{post.newsSite}</spam>
+                        <p className='post-sumary generals-fonts'>{post.summary}</p>
                     </div>
                 </article>
             ))}
