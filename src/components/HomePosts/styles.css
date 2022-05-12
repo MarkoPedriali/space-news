@@ -7,7 +7,7 @@
     align-items: flex-start;
 }
 
-.card-post{
+.linker{
     justify-self: center;
     margin-top: 0.5%;
     width: 33%;
@@ -15,8 +15,8 @@
     flex-direction: column;
     align-items: center;
     transition: 150ms ease-in-out;
-    
 }
+
 
 .card-post:hover{
     cursor: pointer;
@@ -47,9 +47,11 @@
 
 .link-refer{
     font-family: 'Bungee', cursive;
-    color:rgb(94, 90, 98);
+    font-size: 0.8em;
+    color:rgba(218, 11, 35, 0.662);
 }
 
 .post-sumary{
     margin: 0.5rem 0 0;
+    font-size: 0.6rem;
 }
