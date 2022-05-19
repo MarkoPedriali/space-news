@@ -1,6 +1,7 @@
+/* eslint-disable react/style-prop-object */
 import { useState, useEffect } from 'react';
 import React from 'react';
-import './styles.css';
+import './output.css';
 
 
 function HomePosts(){
@@ -10,7 +11,6 @@ function HomePosts(){
     useEffect(() =>{
         fetch('https://api.spaceflightnewsapi.net/v3/articles').then(response => {
             response.json().then(data => {
-                console.log(data)
                 setPosts(data)
             })
         }).catch(error =>{console.log(error)})
@@ -20,19 +20,36 @@ function HomePosts(){
     return(
         <section id="section-posts">
 
+            <h1 id='main-title'>The 10 importants news about the Space</h1>
             {posts.map(post => (
-                <a href={post.url} target='/blank' className='linker'>
-                    <article className="card-post">
-                        <div className='imgCard'>
-                            <img src={post.imageUrl} alt={post.title} />
-                        </div>
-                        <div className="post-infos">
-                            <h2 className='post-title'>{post.title}</h2>
-                            <spam className='link-refer'>{post.newsSite}</spam>
-                            <p className='post-sumary generals-fonts'>{post.summary}</p>
-                        </div>
-                    </article>
-                </a>
+                post === posts[0] ?
+                <div id='main-news'>
+                        <a href={post.url} target='/blank' className='firstNews'>
+                            <article>
+                                <div className='imgCard'>
+                                    <img src={post.imageUrl} alt={post.title} />
+                                </div>
+                                <div className="post-infos">
+                                    <h2 className='post-title'>{post.title}</h2>
+                                </div>
+                            </article>
+                        </a>
+                </div>
+                : post === posts[1] || post === posts[2] || post === posts[3] ?
+                <div id='wrap-3'>
+                    <a href={post.url} target='/blank' className='firstNews'>
+                        <article className="card-post">
+                            <div className='imgCard'>
+                                <img src={post.imageUrl} alt={post.title} />
+                            </div>
+                            <div className="post-infos">
+                                <h2 className='post-title'>{post.title}</h2>
+                                <spam className='link-refer'>{post.newsSite}</spam>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+                : <div>kdsljfk</div>
             ))}
         </section>
     )
