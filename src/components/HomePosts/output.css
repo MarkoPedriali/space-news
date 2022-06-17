@@ -1,0 +1,87 @@
+#section-posts {
+  padding-left: 1.5rem;
+  padding-right: 0.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#section-posts #main-title {
+  color: rgb(184, 13, 13);
+  font-size: 2rem;
+  text-align: center;
+}
+#section-posts #main-news {
+  margin-top: 1rem;
+  width: 60%;
+  height: 20%;
+}
+#section-posts #main-news .post-infos {
+  position: relative;
+  top: -5rem;
+  background-color: rgba(0, 0, 0, 0.5960784314);
+  color: white;
+  text-align: center;
+}
+#section-posts #main-news .card-post:hover {
+  cursor: pointer;
+}
+#section-posts #main-news .imgCard {
+  height: 70vh;
+}
+
+.linker {
+  justify-self: center;
+  margin-top: 0.5%;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 150ms ease-in-out;
+}
+
+.card-post:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 5px 14px -1px #000000;
+  box-shadow: 0px 5px 14px -1px #000000;
+}
+
+.imgCard {
+  width: 100%;
+}
+
+.imgCard img {
+  width: 100%;
+  height: 20rem;
+}
+
+.post-infos {
+  padding: 1rem;
+  color: rgb(33, 32, 32);
+  /* border-style:  none solid;
+  border-width: 1px;
+  border-color: rgb(195, 190, 190); */
+}
+
+.post-title {
+  margin: 0 0 0.5rem;
+}
+
+.link-refer {
+  font-family: "Bungee", cursive;
+  font-size: 0.8em;
+  color: rgba(218, 11, 35, 0.662);
+}
+
+.post-sumary {
+  margin: 0.5rem 0 0;
+  font-size: 0.6rem;
+}
+
+#wrap-3 {
+  width: 10%;
+}
+#wrap-3 .post-infos .post-title {
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=output.css.map */

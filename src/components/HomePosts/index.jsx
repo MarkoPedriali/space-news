@@ -25,9 +25,9 @@ function HomePosts(){
                 post === posts[0] ?
                 <div id='main-news'>
                         <a href={post.url} target='/blank' className='firstNews'>
-                            <article>
-                                <div className='imgCard'>
-                                    <img src={post.imageUrl} alt={post.title} />
+                            <article className=''>
+                                <div >
+                                    <img className='imgCard'  src={post.imageUrl} alt={post.title} />
                                 </div>
                                 <div className="post-infos">
                                     <h2 className='post-title'>{post.title}</h2>
@@ -35,7 +35,7 @@ function HomePosts(){
                             </article>
                         </a>
                 </div>
-                : post === posts[1] || post === posts[2] || post === posts[3] ?
+                : post === posts[1] || post === posts[2] ?
                 <div id='wrap-3'>
                     <a href={post.url} target='/blank' className='firstNews'>
                         <article className="card-post">
@@ -44,7 +44,6 @@ function HomePosts(){
                             </div>
                             <div className="post-infos">
                                 <h2 className='post-title'>{post.title}</h2>
-                                <spam className='link-refer'>{post.newsSite}</spam>
                             </div>
                         </article>
                     </a>
