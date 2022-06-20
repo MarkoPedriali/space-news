@@ -1,7 +1,7 @@
-/* eslint-disable react/style-prop-object */
 import { useState, useEffect } from 'react';
 import React from 'react';
 import './output.css';
+import SPost from '../SinglePost/SPost';
 
 
 function HomePosts(){
@@ -14,42 +14,38 @@ function HomePosts(){
                 setPosts(data)
             })
         }).catch(error =>{console.log(error)})
-    },[])
+    },[]);
 
+    var mainNws = posts.slice(0,3);
+    var secoundaryNws = posts.slice(3);
 
+               
     return(
-        <section id="section-posts">
-
+        <section id="section-posts">          
             <h1 id='main-title'>The 10 importants news about the Space</h1>
-            {posts.map(post => (
-                post === posts[0] ?
-                <div id='main-news'>
-                        <a href={post.url} target='/blank' className='firstNews'>
-                            <article className=''>
-                                <div >
-                                    <img className='imgCard'  src={post.imageUrl} alt={post.title} />
-                                </div>
-                                <div className="post-infos">
-                                    <h2 className='post-title'>{post.title}</h2>
-                                </div>
-                            </article>
-                        </a>
-                </div>
-                : post === posts[1] || post === posts[2] ?
-                <div id='wrap-3'>
-                    <a href={post.url} target='/blank' className='firstNews'>
-                        <article className="card-post">
-                            <div className='imgCard'>
-                                <img src={post.imageUrl} alt={post.title} />
-                            </div>
-                            <div className="post-infos">
-                                <h2 className='post-title'>{post.title}</h2>
-                            </div>
-                        </article>
-                    </a>
-                </div>
-                : <div>kdsljfk</div>
-            ))}
+            <div id="main-news">               
+                {mainNws.map((post, index) => (                                                                     
+                    <SPost  
+                        i={index}                
+                        title={post.title}
+                        imgUrl={post.imageUrl}
+                        url={post.url}
+                    />                    
+                ))}
+            </div>
+            <div id="secoundaryNws">
+                {secoundaryNws.map((post, index) => (                                                        
+                    <SPost 
+                        i={index+1} 
+                        title={post.title}
+                        imgUrl={post.imageUrl}
+                        url={post.url}
+                        newsSite={post.newsSite}
+                        sumary={post.sumary}
+                    />             
+                ))}
+            </div>
+            
         </section>
     )
 }
