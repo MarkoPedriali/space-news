@@ -15,8 +15,32 @@
     #main-news{
         // padding-left: 0.5rem;
         margin-top: 1rem;
-        width: 60%;
+        width: 100%;
         height: 20%;
+        border-style: solid;
+        display: flex;
+        // flex-wrap: wrap;
+        
+
+        .firstNews article{
+            width: 20%;
+
+            .imgCard{
+                
+                width: 100%;
+            }  
+        }
+
+        .others{
+            width: 39%;
+            height: 2vh;
+            margin: 0.3rem;
+
+            img{
+                zoom: 40%;
+                height: 30vh;
+            }
+        }
 
         .post-infos{
             position: relative;
@@ -24,6 +48,10 @@
             background-color: #00000098;
             color: white;
             text-align: center;
+
+            .post-title{
+                font-size: 1.4rem;
+            }
         }
 
         .card-post:hover{
@@ -36,7 +64,66 @@
         
     }
 
-    
+    #secoundaryNws{
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        
+        .others{    
+            margin: 1rem;
+            width: 30%;
+            border: solid 2px rgba(202, 203, 206, 0.661);
+           //background-color: rgba(165, 166, 170, 0.293);
+            
+           :hover{
+
+                img{
+                    opacity: 80%;
+                }
+           }
+        }
+
+        
+            .others article{
+            width: 100%;
+
+            .imgCard{
+                width: 100%;
+                height: 40vh;       
+            }
+
+            .post-infos{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: -22px;
+                text-align:start;
+                
+
+                h2{
+                    color: rgba(15, 15, 15, 0.792);
+                    background-color: #f1eaea;
+                    width: 107%;
+                    
+                }
+
+                spam{
+                    color:rgba(164, 34, 58, 0.811);
+                    
+                }
+
+                p{
+                    color: rgb(72, 68, 68);
+                }
+            }
+               
+        }
+        
+    }
 
 
 
@@ -59,14 +146,6 @@
     box-shadow: 0px 5px 14px -1px #000000;
 }
 
-.imgCard{
-    width: 100%;
-}
-
-.imgCard img{
-    width: 100%;
-    height: 20rem;
-}
 
 .post-infos{
     padding: 1rem;
@@ -91,22 +170,3 @@
     font-size: 0.6rem;
 }
 
-
-#wrap-3{
-    // display: flex;
-    // flex-wrap: nowrap;
-    width: 10%;
-    
-
-
-    .post-infos{
-
-        .post-title{
-            font-size: 1rem;
-        }
-    }
-
-    img{
-        
-    }
-}

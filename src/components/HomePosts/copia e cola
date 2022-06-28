@@ -1,0 +1,62 @@
+<section id="section-posts">
+           
+    <h1 id='main-title'>The 10 importants news about the Space</h1>
+    {posts.map(post => (                             
+        post === posts[0] || post === posts[1] || post === posts[2] ?  
+            <div id="main-news">
+                {post === posts[0] ?
+                    <a href={post.url} target='/blank' className='firstNews'>
+                        <article className=''>
+                            <div >
+                                <img className='imgCard'  src={post.imageUrl} alt={post.title} />
+                            </div>
+                            <div className="post-infos">
+                                <h2 className='post-title'>{post.title}</h2>
+                            </div>
+                        </article>
+                    </a>
+                :
+                    <div id='wrap-3'>
+                        <a href={post.url} target='/blank' className='firstNews'>
+                            <article className="card-post">
+                                <div className='imgCard'>
+                                    <img src={post.imageUrl} alt={post.title} />
+                                </div>
+                                <div className="post-infos">
+                                    <h2 className='post-title'>{post.title}</h2>
+                                </div>
+                            </article>
+                        </a>
+                    </div>
+            
+                }
+            </div>
+        :
+            <div className="secoundaryNews">
+                <h1>Restante</h1>
+            </div>
+              
+            
+                        
+    ))}
+</section>
+
+
+
+
+
+
+
+<div id="main-news">
+                        
+                    
+                        console.log(post)
+                        <SPost 
+                            title={post.title}
+                            imgUrl={post.imgUrl}
+                            url={post.url}
+                            newsSite={post.newsSite}
+                            sumary={post.sumary}
+                        />
+                        
+                    </div> 

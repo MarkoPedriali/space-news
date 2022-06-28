@@ -12,8 +12,25 @@
 }
 #section-posts #main-news {
   margin-top: 1rem;
-  width: 60%;
+  width: 100%;
   height: 20%;
+  border-style: solid;
+  display: flex;
+}
+#section-posts #main-news .firstNews article {
+  width: 20%;
+}
+#section-posts #main-news .firstNews article .imgCard {
+  width: 100%;
+}
+#section-posts #main-news .others {
+  width: 39%;
+  height: 2vh;
+  margin: 0.3rem;
+}
+#section-posts #main-news .others img {
+  zoom: 40%;
+  height: 30vh;
 }
 #section-posts #main-news .post-infos {
   position: relative;
@@ -22,11 +39,54 @@
   color: white;
   text-align: center;
 }
+#section-posts #main-news .post-infos .post-title {
+  font-size: 1.4rem;
+}
 #section-posts #main-news .card-post:hover {
   cursor: pointer;
 }
 #section-posts #main-news .imgCard {
   height: 70vh;
+}
+#section-posts #secoundaryNws {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#section-posts #secoundaryNws .others {
+  margin: 1rem;
+  width: 30%;
+  border: solid 2px rgba(202, 203, 206, 0.661);
+}
+#section-posts #secoundaryNws .others :hover img {
+  opacity: 80%;
+}
+#section-posts #secoundaryNws .others article {
+  width: 100%;
+}
+#section-posts #secoundaryNws .others article .imgCard {
+  width: 100%;
+  height: 40vh;
+}
+#section-posts #secoundaryNws .others article .post-infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -22px;
+  text-align: start;
+}
+#section-posts #secoundaryNws .others article .post-infos h2 {
+  color: rgba(15, 15, 15, 0.792);
+  background-color: #f1eaea;
+  width: 107%;
+}
+#section-posts #secoundaryNws .others article .post-infos spam {
+  color: rgba(164, 34, 58, 0.811);
+}
+#section-posts #secoundaryNws .others article .post-infos p {
+  color: rgb(72, 68, 68);
 }
 
 .linker {
@@ -43,15 +103,6 @@
   cursor: pointer;
   -webkit-box-shadow: 0px 5px 14px -1px #000000;
   box-shadow: 0px 5px 14px -1px #000000;
-}
-
-.imgCard {
-  width: 100%;
-}
-
-.imgCard img {
-  width: 100%;
-  height: 20rem;
 }
 
 .post-infos {
@@ -75,13 +126,6 @@
 .post-sumary {
   margin: 0.5rem 0 0;
   font-size: 0.6rem;
-}
-
-#wrap-3 {
-  width: 10%;
-}
-#wrap-3 .post-infos .post-title {
-  font-size: 1rem;
 }
 
 /*# sourceMappingURL=output.css.map */

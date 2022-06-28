@@ -19,6 +19,7 @@ function HomePosts(){
     var mainNws = posts.slice(0,3);
     var secoundaryNws = posts.slice(3);
 
+    console.log(posts)
                
     return(
         <section id="section-posts">          
@@ -26,6 +27,7 @@ function HomePosts(){
             <div id="main-news">               
                 {mainNws.map((post, index) => (                                                                     
                     <SPost  
+                        
                         i={index}                
                         title={post.title}
                         imgUrl={post.imageUrl}
@@ -36,12 +38,13 @@ function HomePosts(){
             <div id="secoundaryNws">
                 {secoundaryNws.map((post, index) => (                                                        
                     <SPost 
+                        
                         i={index+1} 
                         title={post.title}
                         imgUrl={post.imageUrl}
                         url={post.url}
                         newsSite={post.newsSite}
-                        sumary={post.sumary}
+                        summary={post.summary}
                     />             
                 ))}
             </div>
