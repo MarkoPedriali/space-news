@@ -3,7 +3,6 @@ import React from 'react';
 import './output.css';
 import SPost from '../SinglePost/SPost';
 
-
 function HomePosts(){
  
     const [posts, setPosts] = useState([])
@@ -18,16 +17,13 @@ function HomePosts(){
 
     var mainNws = posts.slice(0,3);
     var secoundaryNws = posts.slice(3);
-
-    console.log(posts)
                
     return(
         <section id="section-posts">          
             <h1 id='main-title'>The 10 importants news about the Space</h1>
             <div id="main-news">               
                 {mainNws.map((post, index) => (                                                                     
-                    <SPost  
-                        
+                    <SPost                          
                         i={index}                
                         title={post.title}
                         imgUrl={post.imageUrl}
@@ -37,8 +33,7 @@ function HomePosts(){
             </div>
             <div id="secoundaryNws">
                 {secoundaryNws.map((post, index) => (                                                        
-                    <SPost 
-                        
+                    <SPost className="card-post"                       
                         i={index+1} 
                         title={post.title}
                         imgUrl={post.imageUrl}

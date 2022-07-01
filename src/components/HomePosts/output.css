@@ -52,41 +52,47 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 #section-posts #secoundaryNws .others {
   margin: 1rem;
-  width: 30%;
-  border: solid 2px rgba(202, 203, 206, 0.661);
+  width: 25%;
+  overflow: hidden;
+  transition: 0.5s;
 }
 #section-posts #secoundaryNws .others :hover img {
   opacity: 80%;
 }
 #section-posts #secoundaryNws .others article {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 #section-posts #secoundaryNws .others article .imgCard {
   width: 100%;
-  height: 40vh;
+  height: 30vh;
+  border: solid 1px rgb(80, 77, 77);
 }
 #section-posts #secoundaryNws .others article .post-infos {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   margin-top: -22px;
-  text-align: start;
 }
 #section-posts #secoundaryNws .others article .post-infos h2 {
-  color: rgba(15, 15, 15, 0.792);
-  background-color: #f1eaea;
-  width: 107%;
+  margin-top: 1.5rem;
+  color: #fafafa;
 }
 #section-posts #secoundaryNws .others article .post-infos spam {
-  color: rgba(164, 34, 58, 0.811);
+  margin-top: 0.5rem;
+  color: #607d8b;
 }
 #section-posts #secoundaryNws .others article .post-infos p {
-  color: rgb(72, 68, 68);
+  margin-top: 0.5rem;
+  color: #aaa6a6;
 }
 
 .linker {
@@ -99,33 +105,16 @@
   transition: 150ms ease-in-out;
 }
 
-.card-post:hover {
-  cursor: pointer;
-  -webkit-box-shadow: 0px 5px 14px -1px #000000;
-  box-shadow: 0px 5px 14px -1px #000000;
-}
-
-.post-infos {
-  padding: 1rem;
-  color: rgb(33, 32, 32);
-  /* border-style:  none solid;
-  border-width: 1px;
-  border-color: rgb(195, 190, 190); */
-}
-
-.post-title {
-  margin: 0 0 0.5rem;
-}
-
 .link-refer {
   font-family: "Bungee", cursive;
   font-size: 0.8em;
   color: rgba(218, 11, 35, 0.662);
 }
 
-.post-sumary {
-  margin: 0.5rem 0 0;
-  font-size: 0.6rem;
+.others:hover {
+  border-radius: 2rem;
+  -webkit-box-shadow: 0px 0px 32px 0px rgba(21, 16, 255, 0.8);
+  box-shadow: 0px 0px 32px 0px rgba(21, 16, 255, 0.8);
 }
 
 /*# sourceMappingURL=output.css.map */
