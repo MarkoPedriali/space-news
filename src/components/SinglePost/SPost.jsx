@@ -1,9 +1,9 @@
 import '../HomePosts/output.css';
 
 function SPost(props){
-    console.log(props);
+    // console.log(props);
     var summary = props.summary
-    console.log(summary)
+    // console.log(summary)
     var idd; 
     props.i === 0 ? idd = 'firstNews' : idd = 'others';
     
