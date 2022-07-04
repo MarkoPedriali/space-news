@@ -3,11 +3,13 @@
     height: 8rem;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2.5rem;
 }
 
 .nav-bar{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem 2rem;
 
     /* border-style: none none solid;
@@ -19,13 +21,9 @@
 }
 
 .nav-list{
-    position: relative;
-    left: 30%;
-    max-width: 12%;
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    align-self: flex-end;
     justify-content: space-between;
 }
 
@@ -58,3 +56,62 @@
     a:hover{
         color:#fbfaff;
     }
+
+#logo{
+    display: flex;
+    margin-left: 10rem;
+}
+
+#menu{
+    display: none;
+    
+}
+
+.linhas :hover{
+    display: block;
+    cursor: pointer;
+    transition: 1s;
+}
+
+label:hover{
+    cursor: pointer;
+}
+
+label:hover .linha{
+    transition: 0.4s;
+    background-color: #fafafb;
+    -webkit-box-shadow: 0px 0px 2px 2px #1510FF; 
+    box-shadow: 0px 0px 2px 2px #1510FF;
+}
+
+.linha{
+    position: relative;
+    width: 40px;
+    height: 8px;
+    background-color: rgb(129, 129, 137);
+    border-radius: 10px;
+    transition: 0.8s ease-in-out;
+    margin: 0.2rem;
+}
+
+#menu:checked + label .linha:nth-child(1){
+    transform: rotate(45deg);
+    top: 10px;
+    margin: 0;
+}
+
+#menu:checked + label .linha:nth-child(2){
+    opacity: 0;
+    margin: 0;
+}
+
+#menu:checked + label .linha:nth-child(3){
+    transform: rotate(-45deg);
+    bottom: 7px;
+    margin: 0;
+}
+
+#main-title{
+    background-color: #ae1c28;
+    text-align: center;
+}

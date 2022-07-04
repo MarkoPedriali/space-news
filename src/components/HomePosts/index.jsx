@@ -20,8 +20,7 @@ function HomePosts(){
     var secoundaryNws = posts.slice(3);
                
     return(
-        <section id="section-posts">          
-            <h1 id='main-title'>The 10 importants news about the Space</h1>
+        <section id="section-posts">         
             <div id="main-news">   
             {/* AQUI COMEÇA O CARROSSEL  --------------------------------------*/}
             {mainNws.length> 0 ?

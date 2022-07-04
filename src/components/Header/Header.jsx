@@ -5,8 +5,15 @@ function Header(){
     return(
         <header id="header">
             <nav className='nav-bar'>
-                <img src={logo} alt="space-news logo" />
-
+                <div class="menu-wraper">
+                    <input type="checkbox" id="menu"/>
+                    <label for="menu"  class="linhas">
+                        <div class="linha"></div>
+                        <div class="linha"></div>
+                        <div class="linha"></div>
+                    </label>               
+                </div>
+                <img src={logo} alt="space-news logo" id='logo' />
                 <ul className="nav-list">
                     <li>
                         <a href="/">Home</a>
@@ -16,6 +23,7 @@ function Header(){
                     </li>
                 </ul>
             </nav>
+            <h1 id='main-title'>The 10 importants news about the Space</h1>
         </header>
 
     )
